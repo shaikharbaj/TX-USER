@@ -1,0 +1,19 @@
+{
+    "_role_fetch_successfully_": "Les rôles sont venus avec succès",
+    "_no_data_found_": "Aucune donnée disponible",
+    "_role_information_not_found_": "Informations sur les rôles introuvables",
+    "_role_with_same_name_or_slug_already_exist_": "Le rôle avec le même nom ou la même limace existe déjà",
+    "_role_created_successfully_": "Rôle créé avec succès",
+    "_error_while_creating_role_": "Erreur lors de la création de rôle",
+    "_role_visibility_updated_successfully_": "La visibilité des rôles mis à jour avec succès",
+    "_role_updated_successfully_": "Rôle mis à jour avec succès",
+    "_error_while_updating_role_": "Erreur lors de la mise à jour du rôle",
+    "_role_deleted_successfully_": "Rôle supprimé avec succès",
+    "_error_while_deleting_role_": "Erreur lors de la suppression du rôle",
+    "_role_restored_successfully_": "Rôle restauré avec succès",
+    "_error_while_restoring_role_": "Erreur lors de la restauration du rôle",
+    "_please_provide_valid_permission_": "Veuillez fournir des autorisations valides",
+    "_permission_attach_to_role_successfully_": "Permission attachée au rôle avec succès",
+    "_role_permission_not_found_": "Rôles autorisation non trouvée",
+    "_role_permission_fetch_successfully_": "Les autorisations de rôles sont obtenues avec succès"
+}

@@ -1,0 +1,20 @@
+{
+  "_user_address_fetched_successfully": "L'adresse de l'utilisateur est obtenue avec succès.",
+  "_record_already_exists": "L'enregistrement existe déjà.",
+  "_we_could_not_find_what_you_are_looking_for": "Nous n'avons pas trouvé ce que vous cherchez.",
+  "_brand_created_successfully": "Marque créée avec succès.",
+  "_error_while_creating_brand": "Erreur lors de la création de la marque.",
+  "_error_while_creating_brand_translation": "Erreur lors de la création de la traduction de la marque.",
+  "_brand_visibility_updated_successfullt": "Visibilité de la marque mise à jour avec succès.",
+  "_error_while_updating_brand_visibility": "Erreur lors de la mise à jour de la visibilité de la marque.",
+  "_brand_with_same_name_already_exists": "La marque du même nom existe déjà.",
+  "_brand_updated_successfully": "Marque mise à jour avec succès.",
+  "_error_while_updating_brand_translation": "Erreur lors de la mise à jour de la traduction de la marque.",
+  "_error_while_updating_brand": "Erreur lors de la mise à jour de la marque.",
+  "_brand_deleted_successfully": "Marque supprimée avec succès.",
+  "_error_while_deleting_brand_translation": "Erreur lors de la suppression de la traduction de la marque.",
+  "_error_while_deleting_brand": "Erreur lors de la suppression de la marque",
+  "_brand_restore_successfully": "Marque restaurée avec succès.",
+  "_error_while_restoring_brand_translation": "Erreur lors de la restauration de la traduction de la marque",
+  "_error_while_restoring_brand": "Erreur lors de la restauration de la marque."
+}

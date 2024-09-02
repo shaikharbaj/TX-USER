@@ -1,0 +1,16 @@
+{
+  "_we_could_not_find_what_you_are_looking_for": "لم نتمكن من العثور على ما تبحث عنه.",
+  "_seller_user_profile_fetched_successfully": "تم جلب ملف تعريف البائع بنجاح.",
+  "_seller_with_this_email_is_restricted_please_contact_administrator_for_support_": "البائع مع هذا البريد الإلكتروني مقيد.يرجى الاتصال بالمسؤول للحصول على الدعم",
+  "_seller_not_found": "لم يتم العثور على البائع",
+  "_basic_details_created_successfully_": "التفاصيل الأساسية التي تم إنشاؤها بنجاح",
+  "_basic_details_updated_successfully_": "تم تحديث التفاصيل الأساسية بنجاح",
+  "_error_while_updating_basic_details_": "خطأ أثناء تحديث التفاصيل الأساسية",
+  "_error_while_creating_basic_details_": "خطأ أثناء إنشاء التفاصيل الأساسية.",
+  "_basic_details_fetched_successfully": "بائع التفاصيل الأساسية جلبت بنجاح.",
+  "_bank_details_fetched_successfully": "تفاصيل بنك البائع جلبت بنجاح.",
+  "_verification_fetched_successfully": "تفاصيل التحقق من البائع جلبت بنجاح.",
+  "_sellers_fetch_successfully_": "جلب البائعين بنجاح",
+  "_document_details_fetched_successfully":"تفاصيل وثيقة البائع جلبت بنجاح.",
+  "_verification_details_fetched_successfully": "Seller verification details fetched successfully."
+}

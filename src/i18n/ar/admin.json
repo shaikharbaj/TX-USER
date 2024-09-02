@@ -1,0 +1,22 @@
+{
+    "_admin_users_fetch_successfully_": "جلب مستخدمي المسؤول بنجاح.",
+    "_deleted_admin_user_fetch_successfully_": "تم حذف مستخدم المسؤول المحذوف بنجاح.",
+    "_data_not_found_": "لم يتم العثور على بيانات",
+    "_admin_user_fetch_successfully_": "جلب مستخدم المسؤول بنجاح",
+    "_please_select_atleast_one_role_": "الرجاء تحديد دور واحد على الأقل",
+    "_please_select_atleast_one_reporting_": "الرجاء تحديد Atleast One",
+    "_role_with_this_specified_id_does_not_exist_": "الدور مع المعرف المحدد غير موجود",
+    "_user_with_this_email_id_already_exist_": "المستخدم مع معرف البريد الإلكتروني هذا موجود بالفعل",
+    "_admin_user_created_successfully_": "تم إنشاء مستخدم المسؤول بنجاح",
+    "_error_while_creating_admin_user_": "خطأ أثناء إنشاء مستخدم المسؤول",
+    "_admin_user_visibility_updated_successfully_": "تم تحديث رؤية مستخدم المسؤول بنجاح",
+    "_error_while_updating_admin_user_visibility": "خطأ أثناء تحديث رؤية مستخدم المسؤول.",
+    "_admin_user_updated_successfully_": "تم تحديث مستخدم المسؤول بنجاح.",
+    "_error_while_updating_admin_user_": "خطأ أثناء تحديث مستخدم المسؤول",
+    "_admin_user_deleted_successfully_": "تم حذف مستخدم المسؤول بنجاح",
+    "_error_while_deleting_admin_user_": "خطأ أثناء حذف مستخدم المسؤول",
+    "_admin_user_restored_successfully_": "استعادة مستخدم المسؤول بنجاح",
+    "_error_while_restoring_admin_user_": "خطأ أثناء استعادة مستخدم المسؤول",
+    "_old_password_is_incorrect_": "كلمة سر قديمة ليست صحيحة",
+    "_admin_user_basic_information_fetched_successfully":"جلب مستخدم المسؤول بنجاح"
+}

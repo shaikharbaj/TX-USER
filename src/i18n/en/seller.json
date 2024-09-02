@@ -1,0 +1,16 @@
+{
+    "_we_could_not_find_what_you_are_looking_for": "We could not find what you are looking for.",
+    "_seller_user_profile_fetched_successfully": "Seller profile fetched successfully.",
+    "_seller_not_found_": "Seller not found",
+    "_seller_with_this_email_is_restricted_please_contact_administrator_for_support_": "Seller with this email is restricted. Please contact administrator for support",
+    "_basic_details_created_successfully_": "Basic Details Created Successfully",
+    "_basic_details_updated_successfully_": "Basic Details Updated Successfully",
+    "_error_while_updating_basic_details_": "Error while Updating basic details",
+    "_error_while_creating_basic_details_": "Error while creating basic betails.",
+    "_basic_details_fetched_successfully": "Seller basic details fetched successfully.",
+    "_bank_details_fetched_successfully": "Seller bank details fetched successfully.",
+    "_sellers_fetch_successfully_": "Sellers fetch successfully",
+    "_verification_fetched_successfully": "Seller verification details fetched successfully.",
+    "_document_details_fetched_successfully": "Seller document details fetched successfully.",
+    "_verification_details_fetched_successfully": "Seller verification details fetched successfully."
+}

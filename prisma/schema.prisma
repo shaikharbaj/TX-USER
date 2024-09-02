@@ -1,0 +1,322 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum UserType {
+  ADMIN
+  SUBADMIN
+  SELLER
+  BUYER
+  FINANCIER
+}
+
+enum UserStatus {
+  PENDING
+  INACTIVE
+  ACTIVE
+  SUSPENDED
+  BLOCKED
+}
+
+enum UserKycStatus {
+  PENDING
+  ACCEPTED
+  REJECTED
+}
+
+enum UserEntity {
+  INDIVIDUAL
+  COMPANY
+}
+
+enum BusinessType {
+  MANUFACTURER
+  TRADER
+  RETAILER
+  ALL
+}
+
+enum AccountType {
+  CURRENT
+  SAVING
+  LOAN
+}
+
+enum UniversalOnBoardingStatusType {
+  PENDING
+  APPROVED
+}
+
+enum BasicInformationStatusType {
+  REJECTED
+  APPROVED
+}
+
+enum BankingStatusType {
+  REJECTED
+  APPROVED
+}
+
+enum VerificationStatusType {
+  REJECTED
+  APPROVED
+}
+
+model SerialNumberConfiguration {
+  id             Int      @id @default(autoincrement())
+  module         String   @unique
+  alias          String
+  initial_number Int
+  current_number Int
+  created_at     DateTime @default(now())
+
+  @@index([module])
+  @@map("serial_number_configurations")
+}
+
+model User {
+  id                          Int                           @id @default(autoincrement())
+  uuid                        String                        @unique @default(uuid())
+  unique_id                   String?                       @db.VarChar(50)
+  entity                      UserEntity                    @default(INDIVIDUAL)
+  first_name                  String?                       @db.VarChar(100)
+  middle_name                 String?                       @db.VarChar(100)
+  last_name                   String?                       @db.VarChar(100)
+  email                       String?                       @unique @db.VarChar(255)
+  mobile_number               String?                       @unique @db.VarChar(255)
+  pan_card_number             String?                       @unique @db.VarChar(255)
+  aadhar_card_number          String?                       @unique @db.VarChar(255)
+  gst_number                  String?                       @unique @db.VarChar(255)
+  full_name_as_per_pan_card   String?                       @db.VarChar(191)
+  designation                 String?                       @db.VarChar(50)
+  company_name                String?                       @db.VarChar(191)
+  rm_name                     String?                       @db.VarChar(191)
+  date_of_birth               DateTime?                     @db.Date()
+  year_of_registration        DateTime?                     @db.Date()
+  user_type                   UserType                      @default(BUYER)
+  status                      UserStatus                    @default(INACTIVE)
+  kyc_status                  UserKycStatus                 @default(PENDING)
+  pan_card_image              String?                       @db.VarChar(255)
+  profile_url                 String?                       @db.VarChar(100)
+  bidding_access              Boolean                       @default(false)
+  is_login                    Boolean                       @default(false)
+  last_logged_in_at           DateTime?
+  last_logged_in_ip           String?                       @db.VarChar(50)
+  token                       String?                       @db.VarChar(100)
+  reset_token                 String?                       @db.VarChar(100)
+  socket_session_id           String?
+  reporting_to                Json[]                        @db.JsonB
+  created_at                  DateTime                      @default(now())
+  created_by                  Int?
+  updated_at                  DateTime                      @updatedAt
+  updated_by                  Int?
+  is_deleted                  Boolean                       @default(false)
+  deleted_at                  DateTime?
+  deleted_by                  Int?
+  onboarding_completed        Boolean                       @default(false)
+  step_completed              Int?                          @default(0)
+  universalOnBoardingStatus   UniversalOnBoardingStatusType @default(PENDING)
+  basic_info_status           BasicInformationStatusType?
+  basic_info_rejection_detail String?
+  business_type               BusinessType?
+  establishment               String?
+  operation_locations         String?
+  company_offerings           String?
+  product_industry_id         Int?
+  product_category_id         Json?                         @db.JsonB
+  auth                        Auth?
+  roles                       Role[]                        @relation("user_roles")
+  user_roles                  UserRole[]
+  UserAddress                 UserAddress[]
+  BankDetails                 UserBankDetails[]
+  UserVerification            UserVerification[]
+  UserDocuments               UserDocuments[]
+
+  @@index([unique_id, email, mobile_number, pan_card_number, gst_number])
+  @@map("users")
+}
+
+model Auth {
+  id         Int      @id @default(autoincrement())
+  user_id    Int      @unique
+  user       User     @relation(fields: [user_id], references: [id], onDelete: Cascade)
+  password   String
+  created_at DateTime @default(now())
+  created_by Int?
+  updated_at DateTime @updatedAt
+  updated_by Int?
+
+  @@map("auth")
+}
+
+model Role {
+  id               Int              @id @default(autoincrement())
+  uuid             String           @unique @default(uuid())
+  role_name        String?          @db.VarChar(256)
+  slug             String           @unique
+  description      String?          @db.VarChar(256)
+  is_active        Boolean          @default(false)
+  created_at       DateTime         @default(now())
+  created_by       Int?
+  updated_at       DateTime         @updatedAt
+  updated_by       Int?
+  is_deleted       Boolean          @default(false)
+  deleted_at       DateTime?
+  deleted_by       Int?
+  permissions      Permission[]     @relation("permission_roles")
+  user             User[]           @relation("user_roles")
+  // Define a many-to-many relationship with the role permission model
+  role_permissions RolePermission[]
+  user_roles       UserRole[]
+
+  @@map("roles")
+}
+
+model Permission {
+  id               Int              @id @default(autoincrement())
+  permissions_name String?          @db.VarChar(256)
+  slug             String           @unique
+  description      String?          @db.VarChar(256)
+  module           String?          @db.VarChar(256)
+  is_active        Boolean          @default(false)
+  created_at       DateTime         @default(now())
+  created_by       Int?
+  updated_at       DateTime         @updatedAt
+  updated_by       Int?
+  deleted_at       DateTime?
+  deleted_by       Int?
+  roles            Role[]           @relation("permission_roles")
+  // Define a many-to-many relationship with the role model
+  permission_roles RolePermission[]
+
+  @@map("permissions")
+}
+
+model RolePermission {
+  id            Int        @id @default(autoincrement())
+  permission_id Int
+  role_id       Int
+  created_at    DateTime   @default(now())
+  created_by    Int?
+  permission    Permission @relation(fields: [permission_id], references: [id], onDelete: Cascade)
+  role          Role       @relation(fields: [role_id], references: [id], onDelete: Cascade)
+
+  @@map("role_permissions")
+}
+
+model UserRole {
+  id         Int      @id @default(autoincrement())
+  user_id    Int
+  role_id    Int
+  created_at DateTime @default(now())
+  created_by Int?
+  user       User     @relation(fields: [user_id], references: [id], onDelete: Cascade)
+  role       Role     @relation(fields: [role_id], references: [id], onDelete: Cascade)
+
+  @@map("user_roles")
+}
+
+model AddressType {
+  id            Int           @id @default(autoincrement())
+  uuid          String        @unique @default(uuid())
+  address_name  String        @unique @db.VarChar(25)
+  slug          String        @unique @db.VarChar(25)
+  created_at    DateTime      @default(now())
+  userAddresses UserAddress[]
+
+  @@map("address_types")
+}
+
+model UserAddress {
+  id            Int         @id @default(autoincrement())
+  uuid          String      @unique @default(uuid())
+  user_id       Int
+  user          User        @relation(fields: [user_id], references: [id], onDelete: Cascade)
+  address_name  String      @db.VarChar(25)
+  addressType   AddressType @relation(fields: [address_name], references: [address_name], onDelete: Cascade)
+  full_name     String      @db.VarChar(256)
+  mobile_number String      @db.VarChar(15)
+  pincode       String      @db.VarChar(7)
+  address1      String      @db.VarChar(256)
+  address2      String?     @db.VarChar(256)
+  landmark      String?     @db.VarChar(150)
+  city          String      @db.VarChar(50)
+  state         String      @db.VarChar(50)
+  country       String      @db.VarChar(50)
+  delivery_days Json        @db.JsonB
+  is_default    Boolean     @default(false)
+  is_active     Boolean     @default(true)
+  created_at    DateTime    @default(now())
+  created_by    Int?
+  updated_at    DateTime    @updatedAt
+  updated_by    Int?
+  is_deleted    Boolean     @default(false)
+  deleted_at    DateTime?
+  deleted_by    Int?
+
+  @@unique([address_name])
+  @@map("user_addresses")
+}
+
+model UserBankDetails {
+  id                       Int                @id @default(autoincrement())
+  uuid                     String             @unique @default(uuid())
+  user_id                  Int
+  user                     User               @relation(fields: [user_id], references: [id], onDelete: Cascade)
+  account_holder_name      String             @db.VarChar(256)
+  account_number           String             @db.VarChar(256)
+  ifsc_code                String             @db.VarChar(256)
+  branch_name              String             @db.VarChar(256)
+  account_type             AccountType
+  banking_status           BankingStatusType?
+  banking_rejection_detail String?
+  created_at               DateTime           @default(now())
+  created_by               Int?
+  updated_at               DateTime           @updatedAt
+  updated_by               Int?
+
+  @@map("user_bank_details")
+}
+
+model UserVerification {
+  id                            Int                     @id @default(autoincrement())
+  uuid                          String                  @unique @default(uuid())
+  user_id                       Int
+  user                          User                    @relation(fields: [user_id], references: [id], onDelete: Cascade)
+  code                          String                  @db.VarChar(256)
+  code_image                    String                  @db.VarChar(256)
+  verification_status           VerificationStatusType?
+  verification_rejection_detail String?
+  created_at                    DateTime                @default(now())
+  created_by                    Int?
+  updated_at                    DateTime                @updatedAt
+  updated_by                    Int?
+
+  @@map("user_verification")
+}
+
+model UserDocuments {
+  id            Int      @id @default(autoincrement())
+  uuid          String   @unique @default(uuid())
+  user_id       Int
+  user          User     @relation(fields: [user_id], references: [id], onDelete: Cascade)
+  document_name String   @db.VarChar(256)
+  document      String   @db.VarChar(256)
+  created_at    DateTime @default(now())
+  created_by    Int?
+  updated_at    DateTime @updatedAt
+  updated_by    Int?
+
+  @@map("user_document")
+}

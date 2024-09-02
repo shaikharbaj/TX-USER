@@ -1,0 +1,20 @@
+{
+  "_user_address_fetched_successfully": "جلب عنوان المستخدم بنجاح.",
+  "_record_already_exists": "السجل موجود من قبل",
+  "_we_could_not_find_what_you_are_looking_for": "لم نتمكن من العثور على ما تبحث عنه",
+  "_brand_created_successfully": "تم إنشاء العلامة التجارية بنجاح",
+  "_error_while_creating_brand": "حدث خطأ أثناء إنشاء العلامة التجارية",
+  "_error_while_creating_brand_translation": "حدث خطأ أثناء إنشاء ترجمة العلامة التجارية",
+  "_brand_visibility_updated_successfullt": "تم تحديث رؤية العلامة التجارية بنجاح",
+  "_error_while_updating_brand_visibility": "حدث خطأ أثناء تحديث رؤية العلامة التجارية",
+  "_brand_with_same_name_already_exists": "العلامة التجارية التي تحمل نفس الاسم موجودة بالفعل",
+  "_brand_updated_successfully": "تم تحديث العلامة التجارية بنجاح",
+  "_error_while_updating_brand_translation": "حدث خطأ أثناء تحديث ترجمة العلامة التجارية",
+  "_error_while_updating_brand": "حدث خطأ أثناء تحديث العلامة التجارية",
+  "_brand_deleted_successfully": "تم حذف العلامة التجارية بنجاح",
+  "_error_while_deleting_brand_translation": "حدث خطأ أثناء حذف ترجمة العلامة التجارية",
+  "_error_while_deleting_brand": "حدث خطأ أثناء حذف العلامة التجارية",
+  "_brand_restore_successfully": "تمت استعادة العلامة التجارية بنجاح",
+  "_error_while_restoring_brand_translation": "حدث خطأ أثناء استعادة ترجمة العلامة التجارية",
+  "_error_while_restoring_brand": "حدث خطأ أثناء استعادة العلامة التجارية"
+}

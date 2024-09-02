@@ -1,0 +1,22 @@
+{
+    "_admin_users_fetch_successfully_": "Les utilisateurs d'administration ont récupéré avec succès.",
+    "_deleted_admin_user_fetch_successfully_": "L'utilisateur d'administrateur supprimé est sorti avec succès.",
+    "_data_not_found_": "Données introuvables",
+    "_admin_user_fetch_successfully_": "L'utilisateur admin a récupéré avec succès",
+    "_please_select_atleast_one_role_": "Veuillez sélectionner au moins un rôle",
+    "_please_select_atleast_one_reporting_": "Veuillez sélectionner au moins un rapport",
+    "_role_with_this_specified_id_does_not_exist_": "Le rôle avec ID spécifié n'existe pas",
+    "_user_with_this_email_id_already_exist_": "L'utilisateur avec cet identifiant de messagerie existe déjà",
+    "_admin_user_created_successfully_": "L'utilisateur de l'administrateur a été créé avec succès",
+    "_error_while_creating_admin_user_": "Erreur lors de la création de l'utilisateur d'administration",
+    "_admin_user_visibility_updated_successfully_": "La visibilité de l'utilisateur de l'administrateur est mise à jour avec succès",
+    "_error_while_updating_admin_user_visibility": "Erreur lors de la mise à jour de la visibilité de l'utilisateur de l'administrateur.",
+    "_admin_user_updated_successfully_": "L'utilisateur admin a mis à jour avec succès.",
+    "_error_while_updating_admin_user_": "Erreur lors de la mise à jour de l'utilisateur de l'administrateur",
+    "_admin_user_deleted_successfully_": "L'utilisateur de l'administrateur a supprimé avec succès",
+    "_error_while_deleting_admin_user_": "Erreur lors de la suppression de l'utilisateur de l'administrateur",
+    "_admin_user_restored_successfully_": "L'utilisateur de l'administrateur a restauré avec succès",
+    "_error_while_restoring_admin_user_": "Erreur lors de la restauration de l'utilisateur de l'administrateur",
+    "_old_password_is_incorrect_": "Ancien mot de passe est incorrect",
+    "_admin_user_basic_information_fetched_successfully":"جلب مستخدم المسؤول بنجاح"
+}

@@ -1,0 +1,19 @@
+{
+    "_role_fetch_successfully_": "جلبت الأدوار بنجاح",
+    "_no_data_found_": "لاتوجد بيانات",
+    "_role_information_not_found_": "لم يتم العثور على معلومات الدور",
+    "_role_with_same_name_or_slug_already_exist_": "دور بنفس الاسم أو الرخوة موجود بالفعل",
+    "_role_created_successfully_": "دور تم إنشاؤه بنجاح",
+    "_error_while_creating_role_": "خطأ أثناء إنشاء الدور",
+    "_role_visibility_updated_successfully_": "تم تحديث رؤية الدور بنجاح",
+    "_role_updated_successfully_": "تم تحديث الدور بنجاح",
+    "_error_while_updating_role_": "خطأ أثناء تحديث الدور",
+    "_role_deleted_successfully_": "تم حذف الدور بنجاح",
+    "_error_while_deleting_role_": "خطأ أثناء حذف الدور",
+    "_role_restored_successfully_": "استعادة الدور بنجاح",
+    "_error_while_restoring_role_": "خطأ أثناء استعادة الدور",
+    "_please_provide_valid_permission_": "يرجى تقديم أذونات صالحة",
+    "_permission_attach_to_role_successfully_": "الإذن المرتبط بالدور بنجاح",
+    "_role_permission_not_found_": "أذونات الأدوار لم يتم العثور عليها",
+    "_role_permission_fetch_successfully_": "أذونات الأدوار التي تم جلبها بنجاح"
+}

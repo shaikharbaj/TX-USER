@@ -1,0 +1,16 @@
+{
+    "_we_could_not_find_what_you_are_looking_for": "Nous n'avons pas pu trouver ce que vous recherchez.",
+    "_seller_user_profile_fetched_successfully": "Le profil du vendeur a récupéré avec succès.",
+    "_seller_not_found_": "Vendeur introuvable",
+    "_seller_with_this_email_is_restricted_please_contact_administrator_for_support_": "Le vendeur avec cet e-mail est restreint.Veuillez contacter l'administrateur pour l'assistance",
+    "_basic_details_created_successfully_": "Détails de base créés avec succès",
+    "_basic_details_updated_successfully_": "Détails de base mis à jour avec succès",
+    "_error_while_updating_basic_details_": "Erreur lors de la mise à jour des détails de base",
+    "_error_while_creating_basic_details_": "Erreur lors de la création de détails de base.",
+    "_basic_details_fetched_successfully": "Détails de base du vendeur a obtenu avec succès.",
+    "_bank_details_fetched_successfully": "Les détails de la banque du vendeur ont obtenu avec succès.",
+    "_verification_fetched_successfully": "Les détails de vérification des vendeurs sont obtenus avec succès.",
+    "_sellers_fetch_successfully_": "Les vendeurs s'approchent avec succès",
+    "_document_details_fetched_successfully": "Détails du document du vendeur a obtenu avec succès.",
+    "_verification_details_fetched_successfully": "Les détails de vérification des vendeurs sont obtenus avec succès."
+}

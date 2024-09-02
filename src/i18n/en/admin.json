@@ -1,0 +1,22 @@
+{
+    "_admin_users_fetch_successfully_": "Admin users fetched successfully.",
+    "_deleted_admin_user_fetch_successfully_": "Deleted admin user fetched successfully.",
+    "_data_not_found_": "Data not found",
+    "_admin_user_fetch_successfully_": "Admin user fetched successfully",
+    "_please_select_atleast_one_role_": "Please select atleast one role",
+    "_please_select_atleast_one_reporting_": "Please select atleast one reporting",
+    "_role_with_this_specified_id_does_not_exist_": "Role with specified id does not exist",
+    "_user_with_this_email_id_already_exist_": "User with this email id already exists",
+    "_admin_user_created_successfully_": "Admin user created successfully",
+    "_error_while_creating_admin_user_": "Error while creating admin user",
+    "_admin_user_visibility_updated_successfully_":"Admin user visibility updated successfully",
+    "_error_while_updating_admin_user_visibility":"Error while updating admin user visibility.",
+    "_admin_user_updated_successfully_":"Admin user updated successfully.",
+    "_error_while_updating_admin_user_":"Error while updating admin user",
+    "_admin_user_deleted_successfully_":"Admin user deleted successfully",
+    "_error_while_deleting_admin_user_":"Error while deleting admin user",
+    "_admin_user_restored_successfully_":"Admin user restored successfully",
+    "_error_while_restoring_admin_user_":"Error while restoring admin user",
+    "_old_password_is_incorrect_":"Old password is incorrect",
+    "_admin_user_basic_information_fetched_successfully":"Admin user fetch successfully"
+}

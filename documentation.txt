@@ -1,0 +1,83 @@
+1) Command to generate new module in specific path
+Command :- nest generate resource ./modules/auth
+
+2) Microservice Package for nestJS
+Command :- npm i --save @nestjs/microservices
+URL :- https://docs.nestjs.com/microservices/basics
+
+3) Package for dot env Package
+Command :- npm i dotenv
+
+4) Package for prisma
+#Reference artical for prisma
+URL :- https://www.prisma.io/blog/nestjs-prisma-rest-api-7D056s1BmOL0
+
+#Pacakage for prisma
+Command :- npm install -D prisma
+ 
+#Command to init prisma
+Command :- npx prisma init
+
+#Command to create migration
+Command :- npx prisma migrate dev --name init
+Example :- npx prisma migrate dev --name create-post
+This command does two things:
+1) It creates a new SQL migration file for this migration
+2) It runs the SQL migration file against the database
+
+Note :-
+Whenever you update your Prisma schema, you will have to update your database schema using either prisma migrate dev or prisma db push. 
+This will keep your database schema in sync with your Prisma schema.
+
+#Command to generate prisma migration only
+Command :- npx prisma migrate dev --create-only --name add-post-paragraphs
+This will only create migration file and will not execute
+
+#Command to run generated migration
+Command :- npx prisma migrate deploy
+
+#Package for prisma Client
+Command :- npm install @prisma/client
+
+#Commands to regenerate Prisma Client.
+Command :- npx prisma generate
+
+#Command to seed database
+Add below command in package.json 
+"prisma": {
+    "seed": "ts-node prisma/seed.ts"
+}
+Run this Command :- npx prisma db seed
+npx prisma db seed -- --name=permission.seed.ts
+
+#Command to run a specific seeder
+Command :- npx prisma db seed -- --seeds=path/to/<filename>.seed.ts
+Example :- npx prisma db seed -- --seeds=prisma/seeders/permissions.seed.ts
+
+#Command to run migration
+npx prisma db push
+
+#Command to generate models from database
+npx prisma db pull
+
+#Refernece for migrations
+https://www.prisma.io/docs/getting-started/setup-prisma/start-from-scratch/relational-databases/querying-the-database-typescript-postgresql
+ 
+#Reference for seeder prisma
+https://www.prisma.io/docs/guides/migrate/seed-database
+
+#Error while migration
+Error: Column count of mysql.proc is wrong. Expected 21, found 20. 
+Created with MariaDB 100108, now running 100421. Please use mysql_upgrade to fix this error Prisma
+
+Solution :- 
+I also could not run the code from the Terminal. I was, however, able to go to the folder itself and "run" the mysql_upgrade application. 
+If you are using XAMPP and the Application Manager, there's a button to Open Application Folder. 
+If you click that, finder will open where XAMPP lives. Open the bin folder. Then scroll until you find mysql_upgrade. 
+Double click it. It will run in a Terminal session and complete the upgrade. 
+Hope this helps someone else as I spent waaayyyy too much time trying to get this to work.
+
+Reference Article :- https://stackoverflow.com/questions/72082617/1558-column-count-of-mysql-proc-is-wrong-expected-21-found-20-please-use-m
+
+5) Package for bcrypt
+Command :- npm install bcrypt

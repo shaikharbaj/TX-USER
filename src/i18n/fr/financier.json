@@ -1,0 +1,9 @@
+{
+    "_financier_fetch_successfully_": "Le financier va chercher avec succès",
+    "_financier_basic_information_fetched_successfully": "Les informations de base du financier sont restées avec succès",
+    "_financier_not_found_": "Financier introuvable",
+    "_financier_with_this_email_is_restricted_please_contact_administrator_for_support_": "Le financier avec cet e-mail est restreint.Veuillez contacter l'administrateur pour l'assistance",
+    "_bank_details_fetched_successfully": "Les détails de la banque financier s'approchent avec succès",
+     "_verification_details_fetched_successfully": "Les détails de vérification des financiers sont restés avec succès",
+    "_document_details_fetched_successfully": "Détails du document financier Approchez avec succès"
+}

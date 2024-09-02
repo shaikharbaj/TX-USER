@@ -1,0 +1,9 @@
+{
+    "_financier_fetch_successfully_": "جلب الممول بنجاح",
+    "_financier_basic_information_fetched_successfully": "تم إحضار المعلومات الأساسية للممولي بنجاح",
+    "_financier_not_found_": "لم يتم العثور على الممول",
+    "_financier_with_this_email_is_restricted_please_contact_administrator_for_support_": "تم تقييد الممول مع هذا البريد الإلكتروني.يرجى الاتصال بالمسؤول للحصول على الدعم",
+    "_bank_details_fetched_successfully": "تفاصيل البنوك الممولة التي جلبها بنجاح",
+     "_verification_details_fetched_successfully": "تفاصيل التحقق من الممولين جلبت بنجاح",
+    "_document_details_fetched_successfully": "تفاصيل الوثيقة الممولة جلبت بنجاح"
+}

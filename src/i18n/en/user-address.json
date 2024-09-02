@@ -1,0 +1,19 @@
+{
+  "_we_could_not_find_what_you_are_looking_for": "We could not find what you are looking for.",
+  "_record_already_exists": "Record already exists",
+
+
+  
+  "_user_address_fetched_successfully": "User address fetched successfully.",
+  "_user_address_created_successfully": "User address created successfully.",
+  "_error_while_creating_user_address": "Error while creating user address.",
+  "_user_address_visibility_updated_successfully": "User address visibility updated successfully.",
+  "_error_while_updating_user_address_visibility": "Error while updating user address visibility.",
+  "_user_address_with_same_name_already_exists": "User address with same name already exists.",
+  "_user_address_updated_successfully": "User address updated successfully.",
+  "_error_while_updating_user_address": "Error while updating user address.",
+  "_user_address_deleted_successfully": "User address deleted successfully.",
+  "_error_while_deleting_user_address": "Error while deleting user address.",
+  "_user_address_restore_successfully": "User address restored successfully.",
+  "_error_while_restoring_user_address": "Error while restoring user address."
+}

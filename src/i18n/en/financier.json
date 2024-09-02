@@ -1,0 +1,9 @@
+{
+    "_financier_fetch_successfully_": "Financier fetch successfully",
+    "_financier_basic_information_fetched_successfully": "Financier basic information fetch successfully",
+    "_financier_not_found_": "Financier not found",
+    "_financier_with_this_email_is_restricted_please_contact_administrator_for_support_": "Financier with this email is restricted. Please contact administrator for support",
+    "_bank_details_fetched_successfully": "Financier bank details fetch successfully",
+    "_verification_details_fetched_successfully": "Financier verification details fetch successfully",
+    "_document_details_fetched_successfully": "Financier document details fetch successfully"
+}
