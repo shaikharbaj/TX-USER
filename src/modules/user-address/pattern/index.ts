@@ -32,6 +32,10 @@ export const USER_ADDRESS_PATTERN: any = {
         role: 'restoreAddressById',
         cmd: 'restore-address-by-id',
       },
+      fetchBuyerAddress:{
+        role:'fetchBuyerAddress',
+        cmd:'fetch-buyer-address'
+     }
     },
     KAFKA: {
       fetchAllAddress: 'fetchAllAddress',
@@ -42,6 +46,7 @@ export const USER_ADDRESS_PATTERN: any = {
       toggleAddressDefault: 'toggleAddressDefault',
       fetchAllAddressDeleted: 'fetchAllAddressDeleted',
       restoreAddressById: 'restoreAddressById',
+      fetchBuyerAddress:"fetchBuyerAddress"
     },
     REDIS: [],
     RABBITMQ: [],

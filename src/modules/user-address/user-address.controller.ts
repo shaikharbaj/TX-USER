@@ -120,7 +120,7 @@ export class UserAddressController {
    * Message pattern handler to create address
    */
   @MessagePattern(USER_ADDRESS_PATTERN[MS_CONFIG.transport].createAddress)
-  async createAddress(@Auth() auth: any, @Data() data: CreateAddressDto) {
+  async createAddress(@Auth() auth: any, @Data() data: any) {
     try {
       return await this.userAddressService.createAddress(auth, data);
     } catch (error) {
@@ -206,4 +206,17 @@ export class UserAddressController {
         throw this.exceptionHandler(error);
       }
     }
+
+      /**
+   * @description
+   * Message pattern handler to fetch buyer address...
+   */
+      @MessagePattern(USER_ADDRESS_PATTERN[MS_CONFIG.transport].fetchBuyerAddress)
+      async fetchBuyerAddress(@Auth() auth:any) {
+        try {
+          return await this.userAddressService.fetchBuyerAddress(auth);
+        } catch (error) {
+          throw this.exceptionHandler(error);
+        }
+      }
 }

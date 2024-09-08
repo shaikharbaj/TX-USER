@@ -170,6 +170,8 @@ export class UserAddressService {
           this.i18n.t("user-address._record_already_exists", { lang })
         );
       }
+
+      console.log(payload)
       //Preparing address payload
       const addressPayload = {
         create: {
@@ -221,6 +223,7 @@ export class UserAddressService {
         this.i18n.t("user-address._error_while_creating_user_address", { lang })
       );
     } catch (error) {
+      console.log(error)
       throw error;
     }
   }
@@ -309,8 +312,8 @@ export class UserAddressService {
       if (!address) {
         throw new NotFoundException(
           this.i18n.t("user-address._we_could_not_find_what_you_are_looking_for", {
-          lang,
-        }));
+            lang,
+          }));
       }
       //Checking address already exist
       const anotherAddressWithSameName = await this.userAddressRepository.findOne(
@@ -344,9 +347,11 @@ export class UserAddressService {
       };
       const updatedRole = await this.userAddressRepository.update({ id: address.id }, addressPayload);
       if (updatedRole) {
-        return { status: true, message: this.i18n.t("user-address._user_address_updated_successfully", {
-          lang,
-        }), };
+        return {
+          status: true, message: this.i18n.t("user-address._user_address_updated_successfully", {
+            lang,
+          }),
+        };
       }
       throw new BadRequestException(
         this.i18n.t("user-address._error_while_updating_user_address", {
@@ -395,9 +400,11 @@ export class UserAddressService {
       };
       const deletedAddress = await this.userAddressRepository.update({ uuid }, addressPayload);
       if (deletedAddress) {
-        return { status: true, message: this.i18n.t("user-address._user_address_deleted_successfully", {
-          lang,
-        }), };
+        return {
+          status: true, message: this.i18n.t("user-address._user_address_deleted_successfully", {
+            lang,
+          }),
+        };
       }
       throw new BadRequestException(
         this.i18n.t("user-address._error_while_deleting_user_address", {
@@ -508,6 +515,39 @@ export class UserAddressService {
       throw new BadRequestException(this.i18n.t("user-address._error_while_restoring_user_address", {
         lang,
       }));
+    } catch (error) {
+      throw error;
+    }
+  }
+
+  /**
+* @description
+* Function to fetch buyer address
+*/
+  async fetchBuyerAddress(auth: any) {
+    try {
+      const lang = this.getLang();
+      const select = {
+        uuid: true,
+        address_name: true,
+        pincode: true,
+        address1: true,
+        address2: true,
+        landmark: true,
+        city: true,
+        state: true,
+        country: true
+      };
+      const address = await this.userAddressRepository.findMany(
+        select,
+        { user_id:auth?.id, deleted_at: null }
+      );
+      return {
+        status: true,
+        message: this.i18n.t("user-address._user_address_fetched_successfully", { lang }),
+        data: address,
+      };
+      
     } catch (error) {
       throw error;
     }
